@@ -22,6 +22,12 @@ class AppTest < Test::Unit::TestCase
 
   def test_index
     get "/"
+    puts last_response.inspect
     assert last_response.ok?
+  end
+
+  def test_body
+    get "/"
+    assert(last_response.body.to_s ==  'Hello', "body must be hello") 
   end
 end
