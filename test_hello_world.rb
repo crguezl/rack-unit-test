@@ -22,7 +22,7 @@ class AppTest < Test::Unit::TestCase
 
   def test_index
     get "/"
-    puts last_response.inspect
+    #puts last_response.inspect
     assert last_response.ok?
   end
 
